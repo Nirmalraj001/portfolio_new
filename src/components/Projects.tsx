@@ -9,7 +9,7 @@ const Projects = () => {
     threshold: 0.1,
   });
 
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
 
   const projects = [
     {
@@ -163,7 +163,7 @@ const Projects = () => {
                         whileTap={{ scale: 0.95 }}
                         href="#"
                         className={`flex items-center gap-2 bg-gradient-to-r ${project.color} text-white px-4 py-2 rounded-lg transition-transform text-sm`}
-                        onClick={(e) => e.stopPropagation()}
+                        onClick={() => window.open(project.url)}
                       >
                         <ExternalLink className="w-4 h-4" />
                         <span>Live Demo</span>
@@ -215,7 +215,7 @@ const Projects = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {selectedProject.tech.map((tech, idx) => (
+                  {selectedProject.tech.map((tech: any, idx: number) => (
                     <span
                       key={idx}
                       className={`px-3 py-1 bg-gradient-to-r ${selectedProject.color} rounded-full text-sm text-white font-medium`}
@@ -229,7 +229,7 @@ const Projects = () => {
                   Key Features
                 </h4>
                 <ul className="space-y-3 mb-8">
-                  {selectedProject.features.map((feature, idx) => (
+                  {selectedProject.features.map((feature: any, idx: number) => (
                     <motion.li
                       key={idx}
                       initial={{ opacity: 0, x: -20 }}
@@ -248,16 +248,8 @@ const Projects = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     href="#"
-                    className="flex items-center gap-2 bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors"
-                  >
-                    <Github className="w-5 h-5" />
-                    <span>View Code</span>
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    href="#"
                     className={`flex items-center gap-2 bg-gradient-to-r ${selectedProject.color} text-white px-6 py-3 rounded-lg transition-transform`}
+                    onClick={() => window.open(selectedProject.url)}
                   >
                     <ExternalLink className="w-5 h-5" />
                     <span>Live Demo</span>
