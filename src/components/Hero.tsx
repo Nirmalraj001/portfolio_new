@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, ChevronDown } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, ChevronDown, Download } from 'lucide-react';
 import AboutImg from '../assets/nirmal.jpg'
+import Resume from "../assets/nirmal_resume.pdf";
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -71,13 +72,12 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6"
             >
-              <a
-                href="mailto:rajnirmal1622@gmail.com"
+              <button  onClick={() => window.open(Resume)}
                 className="flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors text-sm sm:text-base"
               >
-                <Mail className="w-5 h-5" />
-                <span>Contact Me</span>
-              </a>
+                <Download className="w-5 h-5" />
+                <span>Resume</span>
+              </button>
               <a
                 href="#projects"
                 className="flex items-center justify-center gap-2 px-4 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-colors text-sm sm:text-base"

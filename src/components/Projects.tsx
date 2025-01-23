@@ -13,7 +13,7 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Kreon Financial Service',
+      title: 'Myday Payday',
       description: 'A user-friendly loan application system for employees to apply for loans through their organizations.',
       icon: <Shield className="w-8 h-8" />,
       features: [
@@ -21,35 +21,24 @@ const Projects = () => {
         'Implemented role-based access control',
         'Enhanced form validations and portal performance',
       ],
-      tech: ['React', 'Redux', 'Material-UI', 'Node.js'],
+      tech: ['React', 'Redux', 'Material-UI', 'Graphql', 'Redux', 'Node.js'],
       color: 'from-blue-500 to-indigo-500',
       bgPattern: 'radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)',
+      url: "https://mdpd.in/"
     },
     {
-      title: 'Neoswap',
-      description: 'A token bridge feature enabling secure cryptocurrency transfers between different blockchain networks.',
-      icon: <Zap className="w-8 h-8" />,
-      features: [
-        'Added real-time transaction monitoring',
-        'Implemented lazy loading and code splitting',
-        'Created intuitive and modern design',
-      ],
-      tech: ['React', 'Web3.js', 'Tailwind CSS', 'TypeScript'],
-      color: 'from-purple-500 to-pink-500',
-      bgPattern: 'radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 50%)',
-    },
-    {
-      title: 'Bluebac',
-      description: 'A digital networking platform for sellers to connect and interact within specific locations.',
+      title: 'NEWRTS - Fleet Management',
+      description: 'It tracking real-time GPS, driver fatigue detection, and comprehensive analytics, to enhance operational efficiency, safety, and compliance for fleet operators',
       icon: <Globe className="w-8 h-8" />,
       features: [
         'Integrated Google Maps API',
         'Created reusable UI components',
         'Designed responsive mobile-friendly interface',
       ],
-      tech: ['React', 'Google Maps API', 'Styled Components', 'Express'],
+      tech: ['React', 'Typesscript', 'Google Maps API', 'Styled Components', 'Material UI', 'Redux'],
       color: 'from-emerald-500 to-teal-500',
       bgPattern: 'radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)',
+      url: "https://newrts-dev.colanapps.in/"
     },
     {
       title: 'Wor NFT',
@@ -60,9 +49,24 @@ const Projects = () => {
         'Used Material-UI for components',
         'Added Firebase authentication',
       ],
-      tech: ['React', 'Web3.js', 'Firebase', 'Material-UI'],
+      tech: ['React', 'Javascipt', 'Bootstrap', 'Web3.js', 'Firebase', 'Redux'],
       color: 'from-orange-500 to-red-500',
       bgPattern: 'radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.1) 0%, transparent 50%)',
+      url: "https://wornftstage.osizdemos.com/"
+    },
+    {
+      title: 'Neoswap',
+      description: 'A token bridge feature enabling secure cryptocurrency transfers between different blockchain networks.',
+      icon: <Zap className="w-8 h-8" />,
+      features: [
+        'Added real-time transaction monitoring',
+        'Implemented lazy loading and code splitting',
+        'Created intuitive and modern design',
+      ],
+      tech: ['React', 'Web3.js', 'Tailwind CSS', 'TypeScript', 'Redux'],
+      color: 'from-purple-500 to-pink-500',
+      bgPattern: 'radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 50%)',
+      url: "https://neo-swap.io/"
     },
   ];
 
@@ -109,12 +113,12 @@ const Projects = () => {
                 onClick={() => setSelectedProject(project)}
                 className="group cursor-pointer"
               >
-                <div 
+                <div
                   className="relative rounded-2xl overflow-hidden bg-gray-800 h-full transform-gpu transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border border-gray-700"
                   style={{ background: project.bgPattern }}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                  
+
                   <div className="relative p-8">
                     <div className="mb-6">
                       <motion.div
@@ -144,7 +148,7 @@ const Projects = () => {
                     </div>
 
                     <div className="flex gap-4 mt-6">
-                      <motion.a
+                      {/* <motion.a
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         href="#"
@@ -153,7 +157,7 @@ const Projects = () => {
                       >
                         <Github className="w-4 h-4" />
                         <span>Code</span>
-                      </motion.a>
+                      </motion.a> */}
                       <motion.a
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
